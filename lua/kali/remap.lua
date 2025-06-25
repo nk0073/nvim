@@ -14,10 +14,12 @@ vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true
 vim.keymap.set('n', '<Leader>tt', '<Cmd>ToggleTerm<CR>', { desc = 'Toggle floating terminal' })
 
 -- use C-p/c to paste/copy from clipboard
-vim.keymap.set('n', '<C-c>', '"+p', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-v>', '"+p', { noremap = true, silent = true })
-vim.keymap.set('i', '<C-v>', '<C-r>+', { noremap = true, silent = true })
-vim.keymap.set('x', '<C-v>', '"_d"+P', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-S-v>', '"+p', { noremap = true, silent = true }) -- paste
+vim.keymap.set('n', '<C-S-c>', '"+y', { noremap = true, silent = true }) -- copy
+vim.keymap.set('i', '<C-S-v>', '<C-r>+', { noremap = true, silent = true }) -- paste
+vim.keymap.set('x', '<C-S-v>', '"_d"+P', { noremap = true, silent = true }) -- paste (replace)
+vim.keymap.set('x', '<C-S-c>', '"+y', { noremap = true, silent = true })   -- copy
+
 
 if vim.g.neovide == true then
   vim.api.nvim_set_keymap("n", "<C-1>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>", { silent = true })

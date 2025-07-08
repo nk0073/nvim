@@ -85,9 +85,9 @@ vim.g.rustaceanvim = {
         end,
         settings = {
             ["rust-analyzer"] = {
-                checkOnSave = {
-                    command = "clippy", -- optional: use "check" if you want faster feedback
-                },
+                -- checkOnSave = {
+                --     command = "clippy", -- optional: use "check" if you want faster feedback
+                -- },
                 diagnostics = {
                     enable = true,
                     enableExperimental = true,

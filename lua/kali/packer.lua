@@ -22,10 +22,13 @@ return require('packer').startup(function(use)
 
     use({
         'shaunsingh/nord.nvim',
-        config = function()
-            vim.cmd.colorscheme('nord')
-        end
+        -- config = function()
+        -- end
     })
+
+    use('bluz71/vim-moonfly-colors')
+    use("dgox16/oldworld.nvim")
+    use('kdheepak/monochrome.nvim')
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
@@ -98,4 +101,5 @@ return require('packer').startup(function(use)
 
     -- use 'stevearc/oil.nvim'
     use 'andweeb/presence.nvim'
+    use 'tikhomirov/vim-glsl'
 end)

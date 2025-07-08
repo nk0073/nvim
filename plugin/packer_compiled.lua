@@ -110,8 +110,12 @@ _G.packer_plugins = {
     path = "/home/plky/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["monochrome.nvim"] = {
+    loaded = true,
+    path = "/home/plky/.local/share/nvim/site/pack/packer/start/monochrome.nvim",
+    url = "https://github.com/kdheepak/monochrome.nvim"
+  },
   ["nord.nvim"] = {
-    config = { "\27LJ\2\n8\0\0\3\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\2\3\0B\0\2\1K\0\1\0\tnord\16colorscheme\bcmd\bvim\0" },
     loaded = true,
     path = "/home/plky/.local/share/nvim/site/pack/packer/start/nord.nvim",
     url = "https://github.com/shaunsingh/nord.nvim"
@@ -136,6 +140,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/plky/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["oldworld.nvim"] = {
+    loaded = true,
+    path = "/home/plky/.local/share/nvim/site/pack/packer/start/oldworld.nvim",
+    url = "https://github.com/dgox16/oldworld.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -168,7 +177,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["toggleterm.nvim"] = {
-    config = { "\27LJ\2\nF\0\0\3\0\5\1\a6\0\0\0009\0\1\0006\2\2\0009\2\3\0029\2\4\2\24\2\0\2D\0\2\0\fcolumns\6o\bvim\nfloor\tmathµæÌ™\19™³¦ÿ\3D\0\0\3\0\5\1\a6\0\0\0009\0\1\0006\2\2\0009\2\3\0029\2\4\2\24\2\0\2D\0\2\0\nlines\6o\bvim\nfloor\tmathµæÌ™\19™³æþ\3È\1\1\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0003\4\5\0=\4\6\0033\4\a\0=\4\b\3=\3\t\2B\0\2\1K\0\1\0\15float_opts\vheight\0\nwidth\0\1\0\3\vborder\frounded\vheight\0\nwidth\0\1\0\4\14direction\nfloat\15float_opts\0\nshell\tpwsh\18close_on_exit\2\nsetup\15toggleterm\frequire\0" },
+    config = { "\27LJ\2\nF\0\0\3\0\5\1\a6\0\0\0009\0\1\0006\2\2\0009\2\3\0029\2\4\2\24\2\0\2D\0\2\0\fcolumns\6o\bvim\nfloor\tmathµæÌ™\19™³¦ÿ\3D\0\0\3\0\5\1\a6\0\0\0009\0\1\0006\2\2\0009\2\3\0029\2\4\2\24\2\0\2D\0\2\0\nlines\6o\bvim\nfloor\tmathµæÌ™\19™³æþ\3È\1\1\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0003\4\5\0=\4\6\0033\4\a\0=\4\b\3=\3\t\2B\0\2\1K\0\1\0\15float_opts\vheight\0\nwidth\0\1\0\3\vborder\frounded\nwidth\0\vheight\0\1\0\4\15float_opts\0\14direction\nfloat\nshell\tpwsh\18close_on_exit\2\nsetup\15toggleterm\frequire\0" },
     loaded = true,
     path = "/home/plky/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
@@ -182,6 +191,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/plky/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-glsl"] = {
+    loaded = true,
+    path = "/home/plky/.local/share/nvim/site/pack/packer/start/vim-glsl",
+    url = "https://github.com/tikhomirov/vim-glsl"
+  },
+  ["vim-moonfly-colors"] = {
+    loaded = true,
+    path = "/home/plky/.local/share/nvim/site/pack/packer/start/vim-moonfly-colors",
+    url = "https://github.com/bluz71/vim-moonfly-colors"
   }
 }
 
@@ -196,12 +215,8 @@ try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B
 time([[Config for nvim-autopairs]], false)
 -- Config for: toggleterm.nvim
 time([[Config for toggleterm.nvim]], true)
-try_loadstring("\27LJ\2\nF\0\0\3\0\5\1\a6\0\0\0009\0\1\0006\2\2\0009\2\3\0029\2\4\2\24\2\0\2D\0\2\0\fcolumns\6o\bvim\nfloor\tmathµæÌ™\19™³¦ÿ\3D\0\0\3\0\5\1\a6\0\0\0009\0\1\0006\2\2\0009\2\3\0029\2\4\2\24\2\0\2D\0\2\0\nlines\6o\bvim\nfloor\tmathµæÌ™\19™³æþ\3È\1\1\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0003\4\5\0=\4\6\0033\4\a\0=\4\b\3=\3\t\2B\0\2\1K\0\1\0\15float_opts\vheight\0\nwidth\0\1\0\3\vborder\frounded\vheight\0\nwidth\0\1\0\4\14direction\nfloat\15float_opts\0\nshell\tpwsh\18close_on_exit\2\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
+try_loadstring("\27LJ\2\nF\0\0\3\0\5\1\a6\0\0\0009\0\1\0006\2\2\0009\2\3\0029\2\4\2\24\2\0\2D\0\2\0\fcolumns\6o\bvim\nfloor\tmathµæÌ™\19™³¦ÿ\3D\0\0\3\0\5\1\a6\0\0\0009\0\1\0006\2\2\0009\2\3\0029\2\4\2\24\2\0\2D\0\2\0\nlines\6o\bvim\nfloor\tmathµæÌ™\19™³æþ\3È\1\1\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0003\4\5\0=\4\6\0033\4\a\0=\4\b\3=\3\t\2B\0\2\1K\0\1\0\15float_opts\vheight\0\nwidth\0\1\0\3\vborder\frounded\nwidth\0\vheight\0\1\0\4\15float_opts\0\14direction\nfloat\nshell\tpwsh\18close_on_exit\2\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
 time([[Config for toggleterm.nvim]], false)
--- Config for: nord.nvim
-time([[Config for nord.nvim]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\2\3\0B\0\2\1K\0\1\0\tnord\16colorscheme\bcmd\bvim\0", "config", "nord.nvim")
-time([[Config for nord.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

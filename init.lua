@@ -6,6 +6,10 @@ vim.cmd [[
   highlight EndOfBuffer guibg=NONE ctermbg=NONE
 ]]
 
+vim.o.guicursor = ""
+vim.g.nord_disable_background = true
+vim.cmd.colorscheme('default')
+
 -- transparent background
 -- function ColorMyPencils(color)
 --     color = color or 'gruvbox-material'

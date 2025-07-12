@@ -15,20 +15,15 @@ return require('packer').startup(function(use)
 
     use({
         'sainnhe/gruvbox-material',
-        -- config = function()
-        --  vim.cmd.colorscheme('gruvbox-material')
-        -- end
     })
-
     use({
         'shaunsingh/nord.nvim',
-        -- config = function()
-        -- end
     })
-
+    use 'dgox16/oldworld.nvim'
+    use 'Mofiqul/vscode.nvim'
     use('bluz71/vim-moonfly-colors')
-    use("dgox16/oldworld.nvim")
     use('kdheepak/monochrome.nvim')
+    use 'catppuccin/nvim'
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
@@ -68,35 +63,15 @@ return require('packer').startup(function(use)
 
     use {
         "windwp/nvim-autopairs",
+        event = "InsertEnter",
         config = function()
-            require("nvim-autopairs").setup({})
+            require("nvim-autopairs").setup {}
         end
     }
 
     use {
         'L3MON4D3/LuaSnip',
         requires = { 'rafamadriz/friendly-snippets' }
-    }
-
-    use {
-        'akinsho/toggleterm.nvim',
-        tag = '*',
-        config = function()
-            require("toggleterm").setup({
-                -- Open in floating mode by default
-                direction = 'float',
-                -- Make it start PowerShell (pwsh) instead of cmd
-                shell = 'pwsh',
-                -- Optional: Fancy border
-                float_opts = {
-                    border = 'rounded',
-                    width = function() return math.floor(vim.o.columns * 0.8) end, -- 80% of window width
-                    height = function() return math.floor(vim.o.lines * 0.4) end,  -- 40% of window height
-                },
-                -- Close terminal window when process exits (avoid lingering)
-                close_on_exit = true,
-            })
-        end
     }
 
     -- use 'stevearc/oil.nvim'

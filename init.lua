@@ -1,14 +1,18 @@
 require("kali")
 
+vim.o.guicursor = ""
+vim.g.nord_disable_background = true
+-- vim.cmd.colorscheme('catppuccin-frappe')
+vim.cmd.colorscheme('vscode')
+vim.o.background = 'dark'
 vim.cmd [[
   highlight Normal guibg=NONE ctermbg=NONE
   highlight NormalNC guibg=NONE ctermbg=NONE
   highlight EndOfBuffer guibg=NONE ctermbg=NONE
+  highlight LineNr guibg=NONE ctermbg=NONE
+  highlight CursorLineNr guibg=NONE ctermbg=NONE
 ]]
 
-vim.o.guicursor = ""
-vim.g.nord_disable_background = true
-vim.cmd.colorscheme('default')
 
 -- transparent background
 -- function ColorMyPencils(color)

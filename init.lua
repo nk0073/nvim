@@ -3,7 +3,7 @@ require("kali")
 vim.o.guicursor = ""
 vim.g.nord_disable_background = true
 -- vim.cmd.colorscheme('catppuccin-frappe')
-vim.cmd.colorscheme('vscode')
+vim.cmd.colorscheme('oxocarbon')
 vim.o.background = 'dark'
 vim.cmd [[
   highlight Normal guibg=NONE ctermbg=NONE

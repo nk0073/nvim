@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
     use('bluz71/vim-moonfly-colors')
     use('kdheepak/monochrome.nvim')
     use 'catppuccin/nvim'
+    use 'nyoom-engineering/oxocarbon.nvim'
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')

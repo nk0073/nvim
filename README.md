@@ -24,4 +24,14 @@ and run these in order:
 :PackerSync
 ```
 
-Restart neovim. Wait for everything to install. Enjoy.
+Restart neovim. Wait for everything to install.
+
+### Rust
+
+My dear future self, for the love of god, ***DONT INSTALL rust-analyzer WITH MASON.***
+
+Just use this
+```sh
+rustup component add rust-src
+rustup component add rust-analyzer
+```

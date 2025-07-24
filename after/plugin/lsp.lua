@@ -59,35 +59,28 @@ local mason_lspconfig = require('mason-lspconfig')
 mason_lspconfig.setup {
     PATH = "append",
     ensure_installed = {
-        'clangd',        -- C/C++
-        'jdtls',         -- Java
-        'pyright',       -- Python
-        'lua_ls',        -- Lua
-        -- 'rust_analyzer', -- Rust
+        'clangd',  -- C/C++
+        'jdtls',   -- Java
+        'pyright', -- Python
+        'lua_ls',  -- Lua
     },
+    handlers = {
+        function(server)
+            lspconfig[server].setup({
+                capabilities = lsp_capabilities,
+            })
+        end,
+        ['rust_analyzer'] = function() end,
+    }
 }
-
--- lspconfig.rust_analyzer.setup({
---   capabilities = require('cmp_nvim_lsp').default_capabilities(),
---   settings = {
---     ['rust-analyzer'] = {
---       checkOnSave = {
---         command = "clippy",
---       },
---     }
---   }
--- })
 
 vim.g.rustaceanvim = {
     server = {
         on_attach = function(client, bufnr)
-            print("Loaded rustaceanvim override")
+            print("Loaded rustaceanvim")
         end,
         settings = {
             ["rust-analyzer"] = {
-                -- checkOnSave = {
-                --     command = "clippy", -- optional: use "check" if you want faster feedback
-                -- },
                 diagnostics = {
                     enable = true,
                     enableExperimental = true,
@@ -97,57 +90,3 @@ vim.g.rustaceanvim = {
     }
 }
 
--- -- Setup servers
--- mason_lspconfig.setup_handlers {
---   function(server_name)
---     lspconfig[server_name].setup {
---       capabilities = require('cmp_nvim_lsp').default_capabilities(),
---       settings = {
---         Lua = {
---           diagnostics = {
---             globals = { "vim" }, -- Prevent errors on "vim" global
---           },
---           workspace = {
---             checkThirdParty = false, -- Prevent unnecessary prompts
---           },
---           telemetry = { enable = false },
---         }
---       }
---     }
---   end,
---
---   -- Special config for clangd
---     ['clangd'] = function()
---       local cmd = {
---         "clangd",
---         "--background-index",
---         "--clang-tidy",
---         "--header-insertion=never",
---         "--log=verbose",
---         "--all-scopes-completion",
---         "--completion-style=detailed",
---         "--pch-storage=memory",
---       }
---       -- Add Windows-specific options only on Windows
---       if vim.loop.os_uname().sysname == "Windows_NT" then
---         table.insert(cmd, "--query-driver=C:/msys64/ucrt64/bin/gcc.exe")
---       end
---       lspconfig.clangd.setup {
---         cmd = cmd,
---         capabilities = require('cmp_nvim_lsp').default_capabilities(),
---       }
---     end,
---
---   ['jdtls'] = function()
---     lspconfig.jdtls.setup {
---       capabilities = require('cmp_nvim_lsp').default_capabilities(),
---     }
---   end,
---
---   ['pyright'] = function()
---     lspconfig.pyright.setup {
---       capabilities = require('cmp_nvim_lsp').default_capabilities(),
---     }
---   end
--- }
---
